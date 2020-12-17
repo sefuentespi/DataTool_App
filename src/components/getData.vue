@@ -36,7 +36,7 @@ export default {
     methods:{
         submitForm(){
             console.log(this.form)
-            axios.get('http://127.0.0.1:8000/clients/'+this.form.id)
+            axios.get('https://datatool-back.herokuapp.com/clients/'+this.form.id)
                  .then((res) => {
                     console.log(res.data)//Perform Success Action
                     this.id = res.data.id

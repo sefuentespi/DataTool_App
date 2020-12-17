@@ -3,9 +3,8 @@
   <div class="header">
     <h1>DataTool</h1>
     <nav>
-      <button v-on:click="init" v-if="is_auth" > Inicio </button>
-      <button v-on:click="getData" v-if="is_auth" > Consultar </button>
-      <button v-on:click="updateData" v-if="is_auth" > Actualizar </button>
+      <button v-on:click="getData"> Consultar </button>
+      <button v-on:click="updateData"> Actualizar </button>
     </nav>
   </div>
 
