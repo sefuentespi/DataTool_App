@@ -50,6 +50,12 @@ export default {
         this.$router.push({ name:"updateData" })
       }
     },
+    createData: function(){
+      if(this.$router.name != "createData"){
+        let user_name =  localStorage.getItem("current_username")
+        this.$router.push({ name:"createData" })
+      }
+    },
     beforeCreate: function(){
       localStorage.setItem('current_username', 'sefuentespi')
       localStorage.setItem('isAuth', true)
