@@ -28,9 +28,7 @@
 
         </form>
         <div>
-            <h2>ID: {{id}} </h2>
-            <h2>Name: {{name}} </h2>
-            <h2>Estado: {{client_isActive}}</h2>
+            <h2>State: {{mensaje}} </h2>
         </div>
     </div>
 </template>
@@ -47,9 +45,7 @@ export default {
                 name: '',
                 client_isActive: '',           
             },
-            id: 0,
-            name: "",
-            client_isActive: false,
+            mensaje: 'muestra el estado',
         }
     },
     methods:{
@@ -58,9 +54,7 @@ export default {
             axios.post('https://datatool-back.herokuapp.com/clients/',this.form)
                  .then((res) => {
                     console.log(res.data)//Perform Success Action
-                    this.id = res.data.id
-                    this.name = res.data.name
-                    this.client_isActive = res.data.client_isActive
+                    this.mensaje = "Registro Exitoso"
                  })
                  .catch((error) => {
                     // error.response.status Check status code
