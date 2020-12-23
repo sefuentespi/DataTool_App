@@ -54,7 +54,7 @@ export default {
             axios.post('https://datatool-back.herokuapp.com/clients/',this.form)
                  .then((res) => {
                     console.log(res.data)//Perform Success Action
-                    this.mensaje = "Registro Exitoso"
+                    this.mensaje = res.data
                  })
                  .catch((error) => {
                     // error.response.status Check status code
