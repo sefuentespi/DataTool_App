@@ -2,6 +2,7 @@ import vueRouter from 'vue-router'
 import User from './components/User'
 import getData from './components/getData'
 import updateData from './components/updateData'
+import createData from './components/createData'
 import App from './App'
 
 const router = new vueRouter({
@@ -28,6 +29,11 @@ const router = new vueRouter({
             path: '/actualizar/:id',
             name: 'updateData',
             component: updateData    
+        },
+        {   
+            path: '/crear/:id',
+            name: 'createData',
+            component: createData    
         },
     ]
     })

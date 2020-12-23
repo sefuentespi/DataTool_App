@@ -5,6 +5,7 @@
     <nav>
       <button v-on:click="getData"> Consultar </button>
       <button v-on:click="updateData"> Actualizar </button>
+      <button v-on:click="createData"> Crear </button>
     </nav>
   </div>
 
@@ -53,6 +54,12 @@ export default {
       localStorage.setItem('current_username', 'sefuentespi')
       localStorage.setItem('isAuth', true)
       this.$router.push({name:"user",params:{username:'sefuentespi'}})
+    },
+    create: function(){
+      this.is_auth = localStorage.getItem('isAuth') || false
+      console.log(this.is_auth)
+      if(this.$route.name == "root")
+        this.$router.push({name:"user"})
     }
   }
 }
